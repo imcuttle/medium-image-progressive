@@ -1,6 +1,6 @@
 {
   "name": "medium-image-progressive",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Medium's progressive image style",
   "main": "dist/common.js",
   "module": "dist/es.js",
