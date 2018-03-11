@@ -24,7 +24,7 @@ const plugins = [
             'node': '6',
             'browsers': ['ie>=9']
           },
-          'loose': true,
+          "loose": false,
           'useBuiltIns': true,
           'modules': false
         }

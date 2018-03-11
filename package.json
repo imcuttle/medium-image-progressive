@@ -28,6 +28,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "gh-pages-cli": "^0.2.0",
     "parcel-bundler": "^1.6.2",
