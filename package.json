@@ -15,7 +15,7 @@
     "dist": "rimraf dist/ && rollup -c",
     "start": "parcel example/index.html --open",
     "page": "rimraf public && parcel build -d public --public-url /medium-image-progressive/ example/index.html ",
-    "ghpages": "npm run page && gh-pages -d public",
+    "ghpages": "npm run page && gh-pages -d public -b gh-pages",
     "prepublish": "npm run dist"
   },
   "keywords": [

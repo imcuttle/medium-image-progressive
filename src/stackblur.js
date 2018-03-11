@@ -97,7 +97,7 @@ function processImage(img, canvas, radius, blurAlphaChannel)
 
   // canvas.style.width  = w + 'px';
   // canvas.style.height = h + 'px';
-  console.log(w, h, img, img.naturalHeight)
+  // console.log(w, h, img, img.naturalHeight)
   canvas.width = w;
   canvas.height = h;
 
