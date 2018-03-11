@@ -6,7 +6,7 @@ Medium's progressive image style.
 [![NPM version](https://img.shields.io/npm/v/medium-image-progressive.svg?style=flat-square)](https://www.npmjs.com/package/medium-image-progressive)
 [![NPM Downloads](https://img.shields.io/npm/dm/medium-image-progressive.svg?style=flat-square&maxAge=43200)](https://www.npmjs.com/package/medium-image-progressive)
 
-![](http://obu9je6ng.bkt.clouddn.com/Jietu20180311-190212-HD.gif)
+<img src="http://obu9je6ng.bkt.clouddn.com/Jietu20180311-190212-HD.gif"/>
 
 ## Installation
 ### NPM
