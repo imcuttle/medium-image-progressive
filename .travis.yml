@@ -16,6 +16,7 @@ jobs:
   include:
     - stage: Document deploy
       allow_failure: true
+      script: npm run page
       deploy:
         nodejs: stable
         provider: pages
