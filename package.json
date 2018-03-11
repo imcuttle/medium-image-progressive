@@ -14,7 +14,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "rimraf dist/ && rollup -c",
     "start": "parcel example/index.html --open",
-    "page": "rimraf public && parcel build example/index.html -d public",
+    "page": "rimraf public && parcel build -d public --public-url /medium-image-progressive/ example/index.html ",
+    "ghpages": "npm run page && gh-pages -d public",
     "prepublish": "npm run dist"
   },
   "keywords": [
@@ -28,6 +29,7 @@
   "dependencies": {},
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
+    "gh-pages-cli": "^0.2.0",
     "parcel-bundler": "^1.6.2",
     "rimraf": "^2.6.2",
     "rollup": "^0.56.5",
