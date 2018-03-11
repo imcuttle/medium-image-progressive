@@ -14,7 +14,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "rimraf dist/ && rollup -c",
     "start": "parcel example/index.html --open",
-    "page": "rimraf public && parcel build example/index.html -d public"
+    "page": "rimraf public && parcel build example/index.html -d public",
+    "prepublish": "npm run dist"
   },
   "keywords": [
     "medium",
