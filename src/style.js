@@ -24,12 +24,13 @@ export default `
   -webkit-transition: visibility 0s linear 0s,opacity .4s 0s;
   transition: visibility 0s linear 0s,opacity .4s 0s;
 }
-.medium-image-progressive-container .medium-image-progressive:not(.image-loaded),
-.medium-image-progressive-container .medium-image-progressive:not(.canvas-loaded) {
+.medium-image-progressive-container .medium-image-progressive:not(.image-loaded):not(.canvas-loaded) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.medium-image-progressive-container .medium-image-progressive {
   position: absolute;
   top:0;left:0;width:100%;height:100%;
   max-width: 100%;
-  background-color: rgba(0, 0, 0, 0.05);
 }
 .medium-image-progressive-container .medium-image-origin,
 .medium-image-progressive-container .medium-image-progressive canvas {
