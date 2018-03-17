@@ -27,21 +27,6 @@ mediumImageProgressive('img selector', {
 })
 ```
 
-### used as a react component
-
-```javascript
-import { MPImg } from 'medium-image-progressive'
-
-// render
-<MPImg
-  src="https://cdn-images-1.medium.com/freeze/max/30/1*LyAN2qcxGdVXXQBiV7IuGQ.jpeg?q=20"
-  data-src="https://cdn-images-1.medium.com/max/800/1*LyAN2qcxGdVXXQBiV7IuGQ.jpeg"
-  width="700"
-  height="480"
-  />
-
-```
-
 ### Options
 - `progressImageUrlGetter` <function>  
   the thumb image url getter  
@@ -53,3 +38,18 @@ import { MPImg } from 'medium-image-progressive'
   default `elem => elem.getAttribute('width')`
 - `heightGetter`  <function>  
   default: `elem => elem.getAttribute('height')`
+
+### React Component
+
+```javascript
+import MPImg from 'medium-image-progressive/dist/react'
+
+// render
+<MPImg
+  progressUrl="https://cdn-images-1.medium.com/freeze/max/30/1*LyAN2qcxGdVXXQBiV7IuGQ.jpeg?q=20"
+  originUrl="https://cdn-images-1.medium.com/max/800/1*LyAN2qcxGdVXXQBiV7IuGQ.jpeg"
+  width="700"
+  height="480"
+/>
+
+```

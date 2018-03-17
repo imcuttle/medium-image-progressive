@@ -28,11 +28,12 @@ const plugins = [
           'useBuiltIns': true,
           'modules': false
         }
-      ]
+      ],
+      'react'
     ],
-    // 'plugins': [
-    //   'external-helpers'
-    // ]
+    'plugins': [
+      'external-helpers'
+    ]
   }),
   resolve({
     browser: true
@@ -41,43 +42,64 @@ const plugins = [
   filesize()
 ]
 
-const input = 'src/index.js'
 
-export default [
-  {
-    plugins: plugins.concat(sourcemaps()),
-    input,
-    sourceMap: true,
-    output: {
-      file: 'dist/umd.js',
-      name: 'mediumImageProgressive',
-      format: 'umd'
+function config({
+  input,
+  umdName
+}) {
+  return [
+    {
+      plugins: plugins.concat(sourcemaps()),
+      input,
+      output: {
+        sourcemap: true,
+        file: 'dist/umd.js',
+        name: umdName,
+        format: 'umd'
+      }
+    },
+    {
+      plugins: plugins.concat(uglify(), sourcemaps()),
+      input,
+      output: {
+        sourcemap: true,
+        file: 'dist/umd.min.js',
+        name: umdName,
+        format: 'umd'
+      }
+    },
+    {
+      plugins,
+      input,
+      output: {
+        sourcemap: true,
+        file: 'dist/es.js',
+        format: 'es'
+      }
+    },
+    {
+      plugins,
+      input,
+      output: {
+        sourcemap: true,
+        file: 'dist/common.js',
+        format: 'cjs'
+      }
     }
-  },
-  {
-    plugins: plugins.concat(uglify(), sourcemaps()),
-    input,
-    sourceMap: true,
-    output: {
-      file: 'dist/umd.min.js',
-      name: 'mediumImageProgressive',
-      format: 'umd'
-    }
-  },
-  {
-    plugins,
-    input,
-    output: {
-      file: 'dist/es.js',
-      format: 'es'
-    }
-  },
-  {
-    plugins,
-    input,
-    output: {
-      file: 'dist/common.js',
-      format: 'cjs'
-    }
-  }
-]
+  ]
+}
+
+const input = 'src/index.js'
+export default (
+  config({ input, umdName: 'mediumImageProgressive' })
+    .concat({
+      plugins,
+      input: 'src/react.js',
+      external: ['react'],
+      output: {
+        sourcemap: true,
+        file: 'dist/react.js',
+        format: 'cjs'
+      }
+    })
+)

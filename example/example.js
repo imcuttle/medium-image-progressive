@@ -5,7 +5,10 @@
  * @description
  */
 import progress from '../'
+import './react'
 
-progress('img', {
+progress('#dom img', {
   // progressImageUrlGetter: ele => ele.getAttribute('data-thumb')
 })
+
+
