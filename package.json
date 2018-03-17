@@ -16,7 +16,8 @@
     "start": "parcel example/index.html --open",
     "page": "rimraf public && parcel build -d public --public-url /medium-image-progressive/ example/index.html ",
     "ghpages": "npm run page && gh-pages -d public -b gh-pages",
-    "prepublish": "npm run dist"
+    "prepublish": "npm run dist",
+    "testreact": "parcel example/react.html -p 8089 --open"
   },
   "keywords": [
     "medium",
@@ -32,6 +33,8 @@
     "babel-preset-env": "^1.6.1",
     "gh-pages-cli": "^0.2.0",
     "parcel-bundler": "^1.6.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "rimraf": "^2.6.2",
     "rollup": "^0.56.5",
     "rollup-plugin-babel": "^3.0.3",
