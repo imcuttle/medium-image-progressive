@@ -87,6 +87,9 @@ export default class MediumProgressive extends React.Component {
                  ref={(img) => {
                    this.oImg = img
                  }}/>
+            <noscript>
+              <img className="medium-image-origin" src={this.props.originUrl} />
+            </noscript>
           </div>
         </div>
       </div>
