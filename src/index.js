@@ -7,6 +7,7 @@
 import StackBlur from './stackblur'
 import css from './style'
 
+export { default as MPImg } from './imgReact'
 let style = null
 function injectStyle(text) {
   style = style || document.createElement('style')

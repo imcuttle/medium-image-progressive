@@ -2,9 +2,9 @@
  * @Author: mayingying 
  * @Date: 2018-03-17 13:17:49 
  * @Last Modified by: mayingying
- * @Last Modified time: 2018-03-17 15:35:13
+ * @Last Modified time: 2018-03-17 15:56:28
  */
-import MPImg from '../src/imgReact'
+import { MPImg } from '../src'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
